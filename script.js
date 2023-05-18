@@ -4,60 +4,76 @@ let body = document.getElementById("body");
 
 let card = [];
 let img = [];
+let title = [];
 
 // --------My Foods Array---------------
 
-function Food(id, title, ingredients, url, method) {
+function Food(id, title, url, method) {
   this.id = id;
   this.title = title;
-  this.ingredients = ingredients;
   this.url = url;
   this.method = method;
 }
-const pizzaMethod = `jhk cajkhjkn hj touy fgdfgd dfgghf dfgdgdg hfghgfh fghfgfh
-hhjghj fghfghfghf ghfgfh fdgdgdg khkhkhk`;
-const spagetiMethod = `jhk cajkhjkn hj touy fgdfgd dfgghf dfgdgdg hfghgfh fghfgfh
-hhjghj fghfghfghf ghfgfh fdgdgdg khkhkhk`;
-const beafiMethod = `jhk cajkhjkn hj touy fgdfgd dfgghf dfgdgdg hfghgfh fghfgfh
-hhjghj fghfghfghf ghfgfh fdgdgdg khkhkhk`;
-const chickeniMethod = `jhk cajkhjkn hj touy fgdfgd dfgghf dfgdgdg hfghgfh fghfgfh
-hhjghj fghfghfghf ghfgfh fdgdgdg khkhkhk`;
-const fishiMethod = `jhk cajkhjkn hj touy fgdfgd dfgghf dfgdgdg hfghgfh fghfgfh
-hhjghj fghfghfghf ghfgfh fdgdgdg khkhkhk`;
-const potatoiMethod = `jhk cajkhjkn hj touy fgdfgd dfgghf dfgdgdg hfghgfh fghfgfh
-hhjghj fghfghfghf ghfgfh fdgdgdg khkhkhk`;
-const pizza = new Food(1, "pizza", {}, "./ax/about.jpg", pizzaMethod);
-const spageti = new Food(2, "spageti", {}, "./ax/user1.jpg", spagetiMethod);
-const beaf = new Food(3, "beaf", {}, "./ax/washington.png", beafiMethod);
-const chicken = new Food(4, "chicken", {}, "./ax/library.png", chickeniMethod);
-const fish = new Food(5, "fish", {}, "./ax/london.png", fishiMethod);
-const potato = new Food(6, "potato", {}, "./ax/newyork.png", potatoiMethod);
 
-let foods = [pizza, spageti, beaf, chicken, fish, potato];
+const pizzaMethod = `Place a pizza stone on a rack in the lower third of your oven. Preheat the oven to 475°F for at least 30 minutes, preferably an hour. If you don't have a pizza stone, you can use a pizza pan or a thick baking sheet;
+ you need something that will not warp at high temperatures.`;
+const spaghettiMethod = `Don’t add oil. The first thing to know is that adding oil to the water has no effect, as it floats on the top of the water. The second thing to know is that adding oil to cooked spaghetti
+ will make any sauce slide off it – again, not what you want.`;
+const beafiMethod = `This slow roasting method at low heat is good for tougher cuts of beef; the lower heat prevents gristle from getting too tough. Roast beef made this way is easy, relatively inexpensive (compared to other cuts of beef), 
+and you get great leftovers for roast beef sandwiches.`;
+const chickeniMethod = `Chicken breasts are admittedly a challenge to cook evenly because of their shape. They are thicker on one side, and they thin out and taper on the other. It’s best to flatten the thick end so that the entire piece is level. Place the chicken in a plastic bag, then use a meat 
+mallet or rolling pin to pound. Shoot for about ½ to ¾ inch thickness.`;
+const fishiMethod = `There are a few things that you need to know before throwing some salmon steaks on the grill, though. According to Healthline, cooking meats and fish over high heat and an open flame have been linked to the formation of a number of compounds that are connected with things like heart disease and diabetes, but there are precautions to take — like making sure you thaw your fish first to 
+shorten the cooking time, and not putting it directly over a flame`;
+const potatoiMethod = `Place potatoes into a pot with a steamer insert and enough water to reach the bottom of the potatoes. Place a lid on top and turn the heat to medium-high. The steam gets hotter than boiling in water, allowing the potatoes to cook faster.
+After about 15-20 minutes the potatoes should be fork-tender and ready for mashed potatoes.`;
+
+const pizza = new Food(1, "pizza", "./ax/pizza.jpeg", pizzaMethod);
+const spaghetti = new Food(
+  2,
+  "spaghetti",
+  "./ax/spaghetti.jpeg",
+  spaghettiMethod
+);
+const beaf = new Food(3, "beef", "./ax/beef.jpeg", beafiMethod);
+const chicken = new Food(4, "chicken", "./ax/chicken.jpeg", chickeniMethod);
+const fish = new Food(5, "fish", "./ax/fish.jpeg", fishiMethod);
+const potato = new Food(6, "potato", "./ax/potato.jpeg", potatoiMethod);
+
+let foods = [pizza, spaghetti, beaf, chicken, fish, potato];
 
 // --------creating cards at first on bases of Food Array---------------
+generateCards(foods);
 
-for (let i = 0; i < foods.length; i++) {
-  card[i] = document.createElement("div");
-  card[i].classList = "card";
-  card[i].id = i + 1;
-  card[i].title = foods[i].title;
-  card[i].method = foods[i].method;
-
-  img[i] = document.createElement("img");
-  img[i].classList = "img";
-  img[i].src = foods[i].url;
-  img[i].title = foods[i].title;
-  img[i].method = foods[i].method;
-
-  cards.className = "cards";
-  card[i].innerHTML = foods[i].title.toUpperCase();
-  cards.appendChild(card[i]);
-
-  card[i].appendChild(img[i]);
+function generateCards(x) {
+  for (let i = 0; i < x.length; i++) {
+    card[i] = document.createElement("div");
+    card[i].classList = "card";
+    card[i].id = i + 1;
+    card[i].title = x[i].title;
+    card[i].method = x[i].method;
+    img[i] = document.createElement("img");
+    img[i].classList = "img";
+    img[i].src = x[i].url;
+    img[i].title = x[i].title;
+    img[i].method = x[i].method;
+    title[i] = document.createElement("div");
+    title[i].classList = "titlecard";
+    title[i].title = x[i].title;
+    title[i].method = x[i].method;
+    title[i].innerHTML = x[i].title.toUpperCase();
+    cards.className = "cards";
+    cards.appendChild(card[i]);
+    card[i].appendChild(img[i]);
+    card[i].appendChild(title[i]);
+    cards.removeAttribute("id");
+    cards.removeAttribute("class");
+    cards.classList.add(`cards${x.length}`);
+    card[i].addEventListener("click", showDetails);
+    img[i].addEventListener("click", showDetails);
+    title[i].addEventListener("click", showDetails);
+  }
 }
-
-eventActivate();
 
 let Explanation;
 let titleExplanation;
@@ -67,83 +83,14 @@ let activeSelection = true;
 // --------removing All Cards from screen and Filtering cards after pressing button---------------
 
 function removingAndFiltering() {
-  // --------removing all cards after pressing button---------------
-
   while (cards.firstChild) {
     cards.removeChild(cards.firstChild);
   }
-
-  // -------- creating filtered array after pressing button---------------
   const filtered = foods.filter((p) => {
     return p.title.includes(input.value);
   });
 
-  // -------- showing filtered foods on screen after pressing button---------------
-
-  function doFilter() {
-    for (let i = 0; i < filtered.length; i++) {
-      card[i] = document.createElement("div");
-      card[i].classList = "card";
-      card[i].id = i + 1;
-      card[i].title = filtered[i].title;
-      card[i].method = filtered[i].method;
-
-      img[i] = document.createElement("img");
-      img[i].classList = "img";
-      img[i].src = filtered[i].url;
-      img[i].title = filtered[i].title;
-      img[i].method = filtered[i].method;
-
-      card[i].innerHTML = filtered[i].title.toUpperCase();
-      cards.appendChild(card[i]);
-      card[i].appendChild(img[i]);
-    }
-    console.log(filtered.length);
-    if (filtered.length == 1) {
-      cards.removeAttribute("id");
-      cards.removeAttribute("class");
-      cards.classList.add("cards1");
-    }
-    if (filtered.length == 2) {
-      cards.removeAttribute("id");
-      cards.removeAttribute("class");
-      cards.classList.add("cards2");
-    }
-    if (filtered.length == 3) {
-      cards.removeAttribute("id");
-      cards.removeAttribute("class");
-      cards.classList.add("cards3");
-    }
-
-
-
-
-    if (filtered.length == 4) {
-      cards.removeAttribute("id");
-      cards.removeAttribute("class");
-      cards.classList.add("cards4");
-      
-    }
-
-
-
-    if (filtered.length == 6) {
-      cards.removeAttribute("id");
-      cards.removeAttribute("class");
-      cards.id = "cards";
-    }
-
-    eventActivate();
-  }
-
-  setTimeout(doFilter, 0.001);
-}
-
-function eventActivate() {
-  for (let i = 0; i < card.length; i++) {
-    card[i].addEventListener("click", showDetails);
-    img[i].addEventListener("click", showDetails);
-  }
+  generateCards(filtered);
 }
 
 function showDetails(e) {
@@ -158,8 +105,6 @@ function showDetails(e) {
     methodExplanation = document.createElement("div");
     methodExplanation.classList = "methodExplanation";
     methodExplanation.innerHTML = e.target.method;
-
-
 
     Explanation.appendChild(titleExplanation);
     Explanation.appendChild(closeBtn);
