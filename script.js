@@ -29,12 +29,7 @@ const potatoiMethod = `Place potatoes into a pot with a steamer insert and enoug
 After about 15-20 minutes the potatoes should be fork-tender and ready for mashed potatoes.`;
 
 const pizza = new Food(1, "pizza", "./ax/pizza.jpeg", pizzaMethod);
-const spaghetti = new Food(
-  2,
-  "spaghetti",
-  "./ax/spaghetti.jpeg",
-  spaghettiMethod
-);
+const spaghetti = new Food( 2,"spaghetti","./ax/spaghetti.jpeg",spaghettiMethod);
 const beaf = new Food(3, "beef", "./ax/beef.jpeg", beafiMethod);
 const chicken = new Food(4, "chicken", "./ax/chicken.jpeg", chickeniMethod);
 const fish = new Food(5, "fish", "./ax/fish.jpeg", fishiMethod);
@@ -75,23 +70,30 @@ function generateCards(x) {
   }
 }
 
+
+
+// --------removing All Cards from screen and Filtering cards after pressing button---------------
+
+function removingAndFiltering() {
+
+  
+  while (cards.firstChild) {
+    cards.removeChild(cards.firstChild);
+  }
+  const filtered = foods.filter((p) => {
+    return p.title.includes(input.value.toLowerCase());
+  });
+  
+
+  generateCards(filtered);
+}
+
 let Explanation;
 let titleExplanation;
 let closeBtn;
 let activeSelection = true;
 
-// --------removing All Cards from screen and Filtering cards after pressing button---------------
 
-function removingAndFiltering() {
-  while (cards.firstChild) {
-    cards.removeChild(cards.firstChild);
-  }
-  const filtered = foods.filter((p) => {
-    return p.title.includes(input.value);
-  });
-
-  generateCards(filtered);
-}
 
 function showDetails(e) {
   if (activeSelection == true) {
