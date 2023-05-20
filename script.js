@@ -17,13 +17,13 @@ function Food(id, title, url, method) {
 
 const pizzaMethod = `Place a pizza stone on a rack in the lower third of your oven. Preheat the oven to 475°F for at least 30 minutes, preferably an hour. If you don't have a pizza stone, you can use a pizza pan or a thick baking sheet;
  you need something that will not warp at high temperatures.`;
-const spaghettiMethod = `Don’t add oil. The first thing to know is that adding oil to the water has no effect, as it floats on the top of the water. The second thing to know is that adding oil to cooked spaghetti
- will make any sauce slide off it – again, not what you want.`;
+const spaghettiMethod = `Don't add oil. The first thing to know is that adding oil to the water has no effect, as it floats on the top of the water. The second thing to know is that adding oil to cooked spaghetti
+ will make any sauce slide off it - again, not what you want.`;
 const beafiMethod = `This slow roasting method at low heat is good for tougher cuts of beef; the lower heat prevents gristle from getting too tough. Roast beef made this way is easy, relatively inexpensive (compared to other cuts of beef), 
 and you get great leftovers for roast beef sandwiches.`;
 const chickeniMethod = `Chicken breasts are admittedly a challenge to cook evenly because of their shape. They are thicker on one side, and they thin out and taper on the other. It’s best to flatten the thick end so that the entire piece is level. Place the chicken in a plastic bag, then use a meat 
 mallet or rolling pin to pound. Shoot for about ½ to ¾ inch thickness.`;
-const fishiMethod = `There are a few things that you need to know before throwing some salmon steaks on the grill, though. According to Healthline, cooking meats and fish over high heat and an open flame have been linked to the formation of a number of compounds that are connected with things like heart disease and diabetes, but there are precautions to take — like making sure you thaw your fish first to 
+const fishiMethod = `According to Healthline, cooking meats and fish over high heat and an open flame have been linked to the formation of a number of compounds that are connected with things like heart disease and diabetes, but there are precautions to take — like making sure you thaw your fish first to 
 shorten the cooking time, and not putting it directly over a flame`;
 const potatoiMethod = `Place potatoes into a pot with a steamer insert and enough water to reach the bottom of the potatoes. Place a lid on top and turn the heat to medium-high. The steam gets hotter than boiling in water, allowing the potatoes to cook faster.
 After about 15-20 minutes the potatoes should be fork-tender and ready for mashed potatoes.`;
@@ -88,6 +88,9 @@ function removingAndFiltering() {
   generateCards(filtered);
 }
 
+
+
+
 let Explanation;
 let titleExplanation;
 let closeBtn;
@@ -118,8 +121,9 @@ function showDetails(e) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  closeBtn = document.createElement("div");
+  closeBtn = document.createElement("i");
   closeBtn.id = "closeBtn";
+  closeBtn.class = "fa-solid fa-circle-xmark";
 
   closeBtn.addEventListener("click", close);
   function close() {
