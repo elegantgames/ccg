@@ -121,9 +121,10 @@ function showDetails(e) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  closeBtn = document.createElement("i");
-  closeBtn.id = "closeBtn";
-  closeBtn.class = "fa-solid fa-circle-xmark";
+  closeBtn = document.createElement("div");
+  closeBtn.classList.add( "closebtn") ;
+  closeBtn.innerHTML="CLOSE"
+  console.log(closeBtn.classList)
 
   closeBtn.addEventListener("click", close);
   function close() {

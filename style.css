@@ -10,16 +10,51 @@
    margin:auto;
    text-shadow: 0px 0px 20px   rgb(0, 42, 70);
    background-color: rgba(255, 255, 255, 0.473);
-   
 
-
-   
    
 }
-.fa-car{
-font-size: 900px;
-color:yellow
+.closebtn{
+   position: absolute;
+   top:1%;
+   left:99%;
+   transform: translate(-50%,-50%);
+   /* height: 10px; */
+   font-size: 10px;
+   border-radius: 10px;
+color:rgb(0, 3, 5);
+padding: 12px 5px;
+background-color: rgb(255, 255, 255);
+cursor: pointer;
    }
+
+   .closebtn:hover{
+      position: absolute;
+      top:1%;
+      left:99%;
+      transform: translate(-50%,-50%);
+      /* height: 10px; */
+      font-size: 10px;
+      border-radius: 10px;
+   color:rgb(255, 255, 255);
+   padding: 12px 5px;
+   background-color: rgb(0, 0, 0);
+   border: 2px solid rgb(255, 255, 255);
+   cursor: pointer;
+      }
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .title p{
@@ -190,7 +225,7 @@ button{
    top:50%;
    left:50%;
    transform: translate(-50%,-50%);
-   border: 2px solid rgb(255, 1, 1);
+   /* border: 2px solid rgb(255, 1, 1); */
    width: 70%;
    height: 300px;
    background-color: rgba(0, 0, 0, 0.966);
@@ -219,7 +254,7 @@ button{
 .methodExplanation{
    font-size: 1.5em;
    color: grey;
-   border: 1px solid rgb(253, 0, 0);
+   /* border: 1px solid rgb(253, 0, 0); */
    border-radius: 10px;
    /* padding: 20px 10px; */
    text-align:center;
@@ -231,21 +266,31 @@ button{
  
 }
 
-#closeBtn{
-   position: absolute;
-   top:1%;
-   left:99%;
-   transform: translate(-50%,-50%);
-   border: 2px solid black;
-   width: 50px;
-   height: 50px;
-   background-color: rgb(25, 84, 211);
-   border-radius: 50%;
 
-
-}
 
 @media (max-width:480px) {
+
+   .title h1{
+      font-size: 1.5em;
+      margin:auto;
+      text-shadow: 0px 0px 20px   rgb(0, 42, 70);
+      background-color: rgba(255, 255, 255, 0.473);
+   
+      
+   }
+
+   .title p{
+      margin-top: 10px;
+      font-size: 1em;
+      color: rgb(0, 0, 0);
+      text-shadow: 0px 0px 20px   rgb(0, 42, 70);
+      
+   }
+
+
+
+
+
 
    #cards{
      display: grid;
