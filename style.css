@@ -74,7 +74,6 @@ html {
 }
 
 .homeRightSide{
-border: 2px solid white;
 width: 50rem;
 padding: 2% 2%;
 
@@ -392,12 +391,7 @@ footer a i {
     display: none;
   }
  
-.header{
-  width: 100%;
-  
- 
-  
-}
+
 
 html,body{
   overflow-x: hidden;
@@ -430,9 +424,6 @@ html,body{
     gap: 2rem;
     padding: 7rem 3rem;
     text-align: center;
-   
-   
-    
 
   }
   .homeTexts {
@@ -440,7 +431,7 @@ html,body{
     margin: auto;
     margin-top: 3rem;
     width: 100%;
-    color: yellow;
+  
   }
 
   .homeRightSide {
@@ -461,14 +452,10 @@ html,body{
   padding: 0.8rem 0.8rem;
   border-radius: 50%;
   font-size: 1.1rem;
-  
 
 }
 .socialmedia-logo{
- 
-  /* border: 2px solid white; */
-    display: flex;
-  
+  display: flex;
   justify-content: center;
   align-items: center;
 
@@ -482,6 +469,85 @@ html,body{
   margin-top: 2rem;
 }
 
+.about {
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5% 5% 5% 5%;
+  gap: 10%;
+  background-color: rgb(0, 27, 63);
+  width: 100%;
+  min-height: 100vh;
+}
+.aboutimg{
+
+  text-align: center;
+
+}
+
+.aboutimg img{
+  width: 80%;
+  
+}
+
+.aboutText {
+ margin-top: 2rem;
+ text-align: center;
+  
+}
+
+.aboutText h2 {
+  font-size: 3rem;
+  
+}
+.aboutText h3 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  
+}
+
+
+.ourservicesText h3{
+  margin-top: 2rem;
+  font-size: 2.3rem;
+margin-right: 0;
+/* border: 2px solid white; */
+
+}
+
+.services{
+  margin: auto;
+  /* border: 2px solid white; */
+  padding: 1% 1% 1% 1%;
+
+  min-height: 100vh;
+  margin: auto;
+  
+  
+}
+.ourservices{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  gap: 2rem;
+}
+
+.ourservices .box{
+  width: 90%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  height: 50%;
+  margin-bottom: 1rem;
+}
+
+.ourservices .box h3{
+font-size: 1.5rem;
+}
 
 
 
