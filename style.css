@@ -458,14 +458,20 @@ html,body{
   color: rgb(0, 183, 255);
   border: 2px solid rgb(0, 183, 255);
   background: transparent;
-  padding: 1.5rem 1.5rem;
+  padding: 0.8rem 0.8rem;
   border-radius: 50%;
-  width: 1rem;
-  height: 1rem;
-  display: flex;
+  font-size: 1.1rem;
+  
+
+}
+.socialmedia-logo{
+ 
+  /* border: 2px solid white; */
+    display: flex;
+  
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+
 }
 
 
