@@ -385,25 +385,18 @@ footer a i {
   line-height: 2em;
 }
 
-@media (max-width: 992px) {
-  .navbar a {
-    font-size: 1.3rem;
-    transition: 1s;
-    margin-right: 1rem;
-  }
-}
 
-@media (max-width: 768px) {
+
+@media (max-width: 640px) {
   .navbar a {
     display: none;
   }
 
   #menu-icon {
     display:block;
-    position: absolute;
     font-size: 3rem;
     color: #fff;
-    right: 1rem;
+   margin-right: -20rem;
  
   }
 
@@ -412,8 +405,8 @@ footer a i {
 
   .home-img img {
     box-shadow: 5px 5px 30px black;
-    /* width: 90%; */
-    height: auto;
+    width: 90%;
+    /* height: auto; */
  
   }
 
@@ -458,11 +451,4 @@ footer a i {
 
 }
 
-@media(max-width:600px){
-  h3{
-    font-size: 2rem;
-  }
-  span{
-    font-size: 1rem;
-  }
-}
+
