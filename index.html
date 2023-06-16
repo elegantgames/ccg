@@ -4,34 +4,204 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/ae4862ff03.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
-<body id="body">
- <div class="head">
+<body>
+<header class="header">
+    <a href="" class="logo">Portfolio</a>
+    <div id="menu-icon">
+    <i class='bx bx-menu'></i>
+    </div>
+    <nav class="navbar">
+        <a href="#home" >Home</a>
+        <a href="#about"   >About</a>
+        <a href="#services" >Services</a>
+        <a href="#portfolio" >Portfolio</a>
+        <a href="#contact" >Contact</a>
+    </nav>
+</header>
 
-    <div class="title">
-        <h1>Enjoy Cooking!</h1>
-        <p>what would you like to have?</p>
+<section class="home" id="home">
+    <div class="homeRightSide">
+    <div class="homeTexts">
+    <h3>Hello, it's Me</h3>
+    <h1>Mansoor</h1>
+    <h3>And I am a <span>Frontend Developer</span></h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Est impedit</p>
+     </div>  
+
+
+    <div class="socialmedia-logo">
+    <a href="#"><i class='bx bxl-facebook' ></i></a>
+    <a href="#"><i class='bx bxl-twitter' ></i></a>
+    <a href="#"><i class='bx bxl-instagram-alt' ></i></a>
+    <a href="#"><i class='bx bxl-linkedin-square' ></i></a>
     </div>
-    <!-- <i class="fa fa-car"></i> -->
-    <div class="inputs">
-    <div class="searchbox">
-        <input placeholder="Type Here..." id="inputsearch" type="text" pattern="[A-Z]*">
-        <button onclick="removingAndFiltering()">search</button>
+
+    <div class="btnCv">
+    <a href="#" class="btn">Download CV</a>
     </div>
 
     </div>
+    <div class="home-img">
+        <img src="ax/MT.jpg" alt="">
+    </div>
+    
+    
+</section>
+
+<section class="about" id="about">
+    <div class="aboutimg">
+        <img src="ax/MT.jpg" alt="">
+    </div>
+    <div class="aboutText">
+        <h2>About <span>Me</span> </h2>
+        <h3>I am a Web Developer</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate,
+             inventore nesciunt! Natus debitis excepturi delectus alias dolore 
+             consequatur repudiandae facilis illo rem ratione unde, quis commodi 
+             ea omnis autem eius.</p>
+         <a href="" class="btnCv">Read More</a>   
+    </div>
+</section>
+
+
+<section class="services" id="services">
+    <div class="ourservicesText">
+        <h3>Our <span>Services</span> </h3>
+    </div>
+<div class="ourservices">
+    <div class="box">
+        <h3>Web Development</h3>
+    <i class='bx bx-code-alt'></i>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+         suscipit harum iure a atque molestias dolorum voluptas eos ea nemo!</p>
+    <a href="#" class="btnCv">Read More</a>
+    </div>
+    <div class="box">
+        <h3>Graphic Design</h3>
+        <i class='bx bxs-paint' ></i>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+             suscipit harum iure a atque molestias dolorum voluptas eos ea nemo!</p>
+        <a href="#" class="btnCv">Read More</a>
+    </div>
+    <div class="box">
+        <h3>Digital marketing</h3>
+        <i class='bx bx-bar-chart-alt-2' ></i>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+             suscipit harum iure a atque molestias dolorum voluptas eos ea nemo!</p>
+        <a href="#" class="btnCv">Read More</a>
+    </div>
+
+
+
+
 
 </div>
+</section>
 
-<div id="cards"  >
-    
+<section class="portfolio" id="portfolio">
+    <h2 class="portfoliohead">Latest <span>Project</span> </h2>
+    <div class="portfolio-container">
+    <div class="Portfolio-box">
+            <img src="ax/user1.jpg" alt="">
+            <div class="portfolio-layer">
+            <h2>Design</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <a href=""><i>logo</i></a>
+            </div>
+    </div>
+    <div class="Portfolio-box">
+        <img src="ax/user2.jpg" alt="">
+        <div class="portfolio-layer">
+        <h2>Design</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <a href=""><i>logo</i></a>
+        </div>
+    </div>
+    <div class="Portfolio-box">
+        <img src="ax/user2.jpg" alt="">
+        <div class="portfolio-layer">
+        <h2>Design</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <a href=""><i>logo</i></a>
+        </div>
+    </div>
+    <div class="Portfolio-box">
+        <img src="ax/user2.jpg" alt="">
+        <div class="portfolio-layer">
+        <h2>Design</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <a href=""><i>logo</i></a>
+        </div>
+    </div>
+    <div class="Portfolio-box">
+        <img src="ax/user2.jpg" alt="">
+        <div class="portfolio-layer">
+        <h2>Design</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <a href=""><i>logo</i></a>
+        </div>
+    </div>
+    <div class="Portfolio-box">
+        <img src="ax/user2.jpg" alt="">
+        <div class="portfolio-layer">
+        <h2>Design</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <a href=""><i>logo</i></a>
+        </div>
+    </div>
+    <div class="Portfolio-box">
+        <img src="ax/user2.jpg" alt="">
+        <div class="portfolio-layer">
+        <h2>Design</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <a href=""><i>logo</i></a>
+        </div>
+    </div>
+    <div class="Portfolio-box">
+        <img src="ax/user2.jpg" alt="">
+        <div class="portfolio-layer">
+        <h2>Design</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <a href=""><i>logo</i></a>
+        </div>
+    </div>
+    <div class="Portfolio-box">
+        <img src="ax/user2.jpg" alt="">
+        <div class="portfolio-layer">
+        <h2>Design</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <a href=""><i>logo</i></a>
+        </div>
+    </div>
+    </div>
+</section>
 
-</div>
-    
+<section class="contact" id="contact">
+    <h4>Contact <span>Me!</span></h4>
+    <form action="#">
+        <div class="inputs">
+            <input type="text" placeholder="your name">
+            <input type="email" placeholder="your email">
+            <input type="number" placeholder="your number">
+            <input type="text" placeholder="your subject">
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div> 
+
+            <input  type="submit" value="send massage"  class="btn" class="btn-input">
+
+    </form>
+</section>
+
+<footer >
+    <p>all rights is copy-write for website owner </p>
+    <a href="#home"><i class="btnCv" class='bx bx-up-arrow-alt'></i></a>
+</footer>
+<script src="script.js"></script>
 </body>
-    <script src="script.js"></script>
-
 </html>
