@@ -387,16 +387,29 @@ footer a i {
 
 
 
-@media (max-width: 640px) {
+@media (max-width: 375px) {
   .navbar a {
     display: none;
   }
+ 
+.header{
+  width: 100%;
+  
+ 
+  
+}
+
+html,body{
+  overflow-x: hidden;
+}
+
+ 
 
   #menu-icon {
     display:block;
     font-size: 3rem;
     color: #fff;
-   margin-right: -20rem;
+   margin-right: -8rem;
  
   }
 
@@ -406,7 +419,7 @@ footer a i {
   .home-img img {
     box-shadow: 5px 5px 30px black;
     width: 90%;
-    /* height: auto; */
+   
  
   }
 
@@ -417,6 +430,10 @@ footer a i {
     gap: 2rem;
     padding: 7rem 3rem;
     text-align: center;
+   
+   
+    
+
   }
   .homeTexts {
     text-align: center;
@@ -435,11 +452,23 @@ footer a i {
     padding: 1rem 1rem;
   }
 
-.socialmedia-logo{
+
+
+.socialmedia-logo a i {
+  color: rgb(0, 183, 255);
+  border: 2px solid rgb(0, 183, 255);
+  background: transparent;
+  padding: 1.5rem 1.5rem;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
   display: flex;
   justify-content: center;
-  
+  align-items: center;
+  font-size: 1.5rem;
 }
+
+
 
 
 .btnCv{
